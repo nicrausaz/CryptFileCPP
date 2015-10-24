@@ -1,0 +1,18 @@
+﻿Build started 24.10.2015 17:49:56.
+     1>Project "C:\Users\Nicolas\Documents\Visual Studio 2015\Projects\Test\Test\Test.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\Test.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Test.cpp
+         Test.cpp
+     1>c:\users\nicolas\documents\visual studio 2015\projects\test\test\test.cpp(29): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_istream<_Elem,_Traits> &' from 'const char [9]'
+         c:\program files\microsoft visual studio 14.0\vc\include\string(157): note: see declaration of 'std::getline'
+     1>c:\users\nicolas\documents\visual studio 2015\projects\test\test\test.cpp(29): error C2780: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': expects 3 arguments - 2 provided
+         c:\program files\microsoft visual studio 14.0\vc\include\string(146): note: see declaration of 'std::getline'
+     1>c:\users\nicolas\documents\visual studio 2015\projects\test\test\test.cpp(29): error C2784: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'std::basic_istream<_Elem,_Traits> &&' from 'const char [9]'
+         c:\program files\microsoft visual studio 14.0\vc\include\string(126): note: see declaration of 'std::getline'
+     1>c:\users\nicolas\documents\visual studio 2015\projects\test\test\test.cpp(29): error C2780: 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)': expects 3 arguments - 2 provided
+         c:\program files\microsoft visual studio 14.0\vc\include\string(73): note: see declaration of 'std::getline'
+     1>Done Building Project "C:\Users\Nicolas\Documents\Visual Studio 2015\Projects\Test\Test\Test.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.34
