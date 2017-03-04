@@ -7,49 +7,64 @@ using namespace std;
 
 void main(void)
 {
-	cout << "MENU" << endl;
-	cout << "------" << endl;
-	cout << "[1] Crypt file" << endl;
-	cout << "[2] Exit" << endl;
-	int inChoice = 0;
+	int choice = 0;
+	ofstream offile;
+	ifstream iffile("../test.txt");
+	string line;
 
-	while (!(inChoice == 1) || !(inChoice == 2))
+	while (choice != 3)
 	{
-		cout << "Select 1 or 2" << endl;
+		cout << endl << "MENU" << endl;
+		cout << "------" << endl;
+		cout << "[1] Crypt file" << endl;
+		cout << "[2] Decrypt file" << endl;
+		cout << "[3] Exit" << endl;
 		cout << endl;
 		cout << "Choice: ";
-		cin >> inChoice;
+		cin >> choice;
 
-		if (inChoice == 1)
-		{
-			cout << "Opening file..." << endl;
-			ifstream fichier("test.txt", ios::in);
-			cout << "Reading file..." << endl;
-			string ligne;
-			while (getline("test.txt", ligne))
-			{
-				cout << ligne << endl;
+		switch (choice) {
+		case 1:
+			if (iffile.is_open()) {
 
+				while (getline(iffile, line)) {
+					// cout << line << '\n';
+					for (char& c : line) {
+						cout << c << endl;
+
+					}
+				}
+				iffile.close();
 			}
-			
-			
-			//analyse file
-			// todo: open file
-			// test: cout a word
-			// 
-
 			break;
 
+			/*else {
+				cout << "Unable to open file";
+			}}*/
+		case 2:
+		case 3: cout << "BYE" << endl;
+		default: cout << "Nothing to do" << endl;
 		}
-		else if (inChoice == 2)
-		{
-			cout << "BYE" << endl;
-			break;
-		}
+
 	}
-
-
 
 }
 
+void readFile(ifstream file, string line) {
+	if (file.is_open()) {
 
+		while (getline(file, line)) {
+			cout << line << '\n';
+		}
+		file.close();
+	}
+	else {
+		cout << "Unable to open file";
+	}
+}
+
+void writeToFile(ofstream file) {
+	file.open("../test.txt");
+	file << "Writing this to a file.\n";
+	file.close();
+}
